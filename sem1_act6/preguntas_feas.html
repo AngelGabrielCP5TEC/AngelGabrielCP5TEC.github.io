@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+
+        #lista_HTML {
+            gap: 20px;
+            padding: 20px;
+            background-color: lightgray;
+        }
+        #lista_HTML ul, #lista_HTML ol {
+            margin: 0;
+            padding: 0;
+        }
+        #lista_HTML li {
+            list-style-position: inside;
+        }
+
+
+
+        .titulo{
+            width: 50%;
+            margin: 0 auto;
+            background-color: lightblue;
+            text-align: center;
+        }
+
+        .texto_HTML{
+            margin: 1000;
+        }
+        .texto_HTML h2{
+            color:rgb(41, 79, 4);
+            background-color: chocolate;
+        }
+        .texto_HTML h3{
+            color:rgb(105, 4, 75);
+        }
+        .texto_HTML h4{
+            color:rgb(180, 183, 38);
+        }
+        .texto_HTML p b{
+            color:rgb(180, 183, 38);
+            background-color: blueviolet;
+        }
+        .texto_HTML li b{
+            color:rgb(180, 183, 38);
+            background-color: red;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .texto_CSS{
+            width: 100%;
+            height: 100vh;
+            background-image: url('img/papa.png');
+            background-size: cover; /* Ajusta la imagen para cubrir todo el elemento */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+        }
+        .texto_CSS h2{
+            background-color: blue;
+            color:beige;
+            text-align: center;
+        }
+        .texto_CSS h3{
+            writing-mode: vertical-rl;
+            background-color: lightblue;
+        }
+        .texto_CSS h4{
+            margin-left: 10%;
+            color:coral
+        }
+        .texto_CSS b{
+            color:rgb(108, 123, 0);
+        }
+
+        .texto_al_final{
+            text-align: end;
+        }
+
+        
+
+        h1{
+            color:blueviolet
+        }
+
+        body{
+            background-color:aliceblue;
+        }
+
+        table{
+            display: flex;
+            flex-direction:row;
+            align-items: flex-start;
+            border: 1px solid black;
+        }
+
+    </style>
+    <title>HTML & CSS</title>
+</head>
+<body>
+    <div class="titulo">
+        <h1>HTML & CSS</h1>
+    </div>
+
+    <div class="texto_HTML">
+        <h2>HTML</h2>
+
+        <h3>Introduction</h3>
+        <div>
+            <h4>What is HTML?</h4> 
+            <p>
+                Es un hiper texto usado para programar páginas web de forma más sencilla y versatil
+            </p>
+
+            
+            <h4>Explain the head and the body tags.</h4> 
+            <p>    
+                La etiqueta <b>head</b> contiene cierta información específica del documento como el título, enlaces y otra información que el usuario no ve. 
+                Mientras que etiqueta <b>body</b> contiene el contenido visible para el usuario de la página web como texto, imágenes, videos, etc.
+            </p>
+
+            <h3>Basic Tags</h3>
+
+            <h4>Explain the section, article, aside, header, footer tag.</h4>
+            <ul>
+                <li><b>section:</b> Define una sección en un documento. Puede ser usado para agrupar contenido temáticamente relacionado.</li>
+                <li><b>article:</b> Representa un contenido autónomo y auto-contenido, como un artículo de un blog o una noticia.</li>
+                <li><b>aside:</b> Define un contenido aparte del contenido principal, como una barra lateral o una nota al margen.</li>
+                <li><b>header:</b> Representa un grupo de ayudas introductorias o de navegación. Puede contener títulos, logotipos, o menús de navegación.</li>
+                <li><b>footer:</b> Define el pie de página de un documento o sección, usualmente contiene información de autoría, derechos de autor, o enlaces a términos de uso.</li>
+            </ul>
+
+            <h4>Create an unordered list. Create an ordered list.</h4>
+            <div id="lista_HTML">
+                <ul>
+                    <li>Elemento 1</li>
+                    <li>Elemento 2</li>
+                    <li>Elemento 3</li>
+                </ul>
+                <ol>
+                    <li>Primer elemento</li>
+                    <li>Segundo elemento</li>
+                    <li>Tercer elemento</li>
+                </ol>
+            </div>
+            
+
+            <h4>Create a basic table using html.</h4>
+            <table border="3">
+                <thead>
+                    <tr>
+                        <th>Dia</th>
+                        <th>Materia</th>
+                        <th>Hora</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lunes</td>
+                        <td>Artes</td>
+                        <td>7:00 am</td>
+                    </tr>
+                    <tr>
+                        <td>Marte</td>
+                        <td>Programación</td>
+                        <td>11:00 am</td>
+                    </tr>
+                    <tr>
+                        <td>Jueves</td>
+                        <td>Optativa</td>
+                        <td>1:00 pm</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    
+    <div class="texto_CSS">
+        <h2>CSS</h2>
+
+        <h3>Introduction</h3>
+    
+        <h4>What is CSS?</h4> 
+        <p>CSS es un lenguaje de programacion enfocado al diseño para páginas web.</p>
+    
+        <h4>What is the purpose of CSS?</h4> 
+        <p>Separar el contenido de la presentación en una página web. Esto permite definir estilos visuales, como colores, fuentes, espacios, y posiciones de los elementos HTML.</p>
+    
+        <h4>How do you apply a CSS to an HTML (explain the 3 options).</h4>
+        <ul>
+            <li>Usando el atributo <b>style</b> directamente en la etiqueta HTML.</li>
+            <li> Usando la etiqueta <b>style</b> dentro del <b>head</b>.</li>
+            <li>Usando un archivo CSS externo vinculado con un link en el <b>head</b>.</li>
+        </ul>
+    
+        <h4>What is a selector? What is a CSS rule?</h4> 
+        <p>Un selector es un patrón que coincide con los elementos a los que se le quiere dar estilo. Una regla CSS es un conjunto de propiedades, valores o atributos aplicados a los elementos seleccionados. </p>
+    
+        <h3>Basic CSS</h3>
+    
+        <h4>Explain a:</h4>
+        <ul class="texto_al_final">
+            <li><b>Tag Selector</b>: Selecciona todos los elementos de un tipo especificado. Ejemplo: <b>p { color: red; }</b> selecciona todos los párrafos.</li>
+            <li><b>Class Selector</b>: Selecciona todos los elementos con una clase especificada. Ejemplo: <b>.miClase { color: red; }</b> selecciona todos los elementos con la clase "miClase".</li>
+            <li><b>Tag and Class Selector</b>: Combina un selector de etiqueta y una clase. Ejemplo: <b>p.miClase { color: red; }</b> selecciona los párrafos con la clase "miClase".</li>
+            <li><b>Id Selector</b>: Selecciona un elemento con un id especificado. Ejemplo: <b>#miId { color: red; }</b> selecciona el elemento con el id "miId".</li>
+        </ul>
+    
+        <h4>What is a class? What is an id? How are they related to CSS?</h4> 
+        <p>Una clase es un atributo que define un conjunto de estilos noo tamando en cuenta la etiqueta a la que será aplicada. Un id es un atributo que identifica de manera única un solo elemento. En CSS, las clases se definen con un punto (.) y los ids con un simbolo de gato (#).</p>
+    
+        <h4>Explain the CSS Box Model? Show an example.</h4> 
+        <p>El modelo de caja CSS es un concepto que describe el diseño y el espacio de cada elemento en la página web. Incluye márgenes, bordes, rellenos y el contenido real del elemento. Por ejemplo:</p>
+        <p class="texto_al_final">
+            div{ <br>
+                width: 100px;<br>
+                height: 100px;<br>
+                padding: 10px;<br>
+                border: 5px solid black;<br>
+                margin: 20px;<br>
+            }
+        </p>
+    
+        <h4>How can you change the font color using CSS?</h4> 
+        <p>Utilizando la propiedad <b>color</b> en CSS. </p>
+
+    </div>
+
+    
+</body>
+</html>

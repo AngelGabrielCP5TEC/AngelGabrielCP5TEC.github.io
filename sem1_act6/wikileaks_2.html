@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+    <title>WikiLeaks 2</title>
+    <style>
+        .barra_opciones{
+            display: flex;
+            justify-content: space-around;
+            background-color: #1c2255;
+            padding: 10px;
+        }
+        .barra_opciones h1{
+            text-align: center;
+            color: #f4f4f4;
+            margin: 0;
+        }
+        .barra_opciones ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        .barra_opciones ul li{
+            display: inline;
+            margin: 0 10px;
+        }
+        .barra_opciones ul li a{
+            color: white;
+            text-decoration: none;
+        }
+        .barra_opciones ul li a:hover{
+            color:#007bff;
+        }
+
+        #barra_busqueda{
+            display: flex;
+            justify-content: center;
+
+            margin: 20px 0;
+        }
+        #barra_busqueda input{
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        #barra_busqueda button{
+            padding: 10px 15px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-left: 10px;
+        }
+        #barra_busqueda button:hover{
+            background-color: #0056b3;
+        }
+
+        .conenedor_articulos{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .articulo{
+            width: 35%;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+        }
+        .articulo img{
+            width: 100%;
+            border-radius: 10px;
+        }
+        .articulo h3{
+            text-align: center;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    
+    <div class="barra_opciones">
+        <div>
+            <h1>WikiLeaks</h1>
+        </div>
+
+        <div>
+            <ul>
+                <li> <a href="https://wikileaks/leaks">Leaks</a> </li>
+                <li> <a href="https://wikileaks/news">News</a> </li>
+                <li> <a href="https://wikileaks/about">About</a> </li>
+                <li> <a href="https://wikileaks/partners">Partners</a> </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul>
+                <li> <a href="https://wikileaks/donate">Donate</a> </li>
+                <li> <a href="https://wikileaks/submit">Submit</a> </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="barra_busqueda">
+        <input type="text" placeholder="Search Keywords">
+        <button type="submit">Search</button>
+    </div>
+
+    <div class="conenedor_articulos">
+        <div class="articulo">
+            <img src="./img/cactus.png">
+            <h3>Cactus baila para ganarse la vida</h3>
+            <p>Hoy, 11 de febrero, se presenta el cactus mexicano bailarin.</p>
+            <p>11/02/2025</p>
+        </div>
+
+        <div class="articulo">
+            <img src="./img/uiai2.gif">
+            <h3>Uiai iai ahora en movimiento</h3>
+            <p>Hoy, 11 de febrero, el mejor baile del mundo pero ahora si se mueve.</p>
+            <p>11/02/2025</p>
+        </div>
+    </div>
+</body>
+</html>
