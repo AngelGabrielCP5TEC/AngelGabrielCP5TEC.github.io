@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donantes</title>
+    <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css">
+</head>
+<body>
+    <h1>Lista de donantes</h1>
+   
+    <a href="/">Bienvenida</a>
+    <a href="/escuelas">Escuelas</a>
+
+    <br><br>
+
+    <div id="donantes"></div>
+
+    <script>
+        async function obtenerDonantes() {
+        //Agregar el url adecuado
+          const listaEscuelas= await fetch("/api/donantes");
+          const jsonLE=await listaEscuelas.json();
+          console.log(jsonLE);
+          
+          //Muestra las escuelas en el html
+          const elementos = document.getElementById("donantes");
+            fetch('/api/donantes')
+            .then(response => response.json())
+            .then(objetoDeArreglos => {
+                objetoDeArreglos.donantes.forEach((donante) => {
+                const escuelaDiv = document.createElement("div");
+                escuelaDiv.textContent = `Nombre: ${donante.nombre}.  Edad: ${donante.edad}`;
+                elementos.appendChild(escuelaDiv)
+                });
+            })
+            .catch(error => console.error('Error:', error));
+
+        }
+        obtenerDonantes();
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Equipo</title>
+    <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css">
+</head>
+<body>
+    <h1>Equipo</h1>
+   
+    <a href="/">Bienvenida</a>
+    <br>
+    <a href="/opinion">Opinion</a>
+    <br><br>
+
+    <div id="integrantes"></div>
+
+    <script>
+        async function obtenerEquipo() {
+        //Agregar el url adecuado
+        const listaEscuelas= await fetch("/api/equipo");
+          const jsonLE=await listaEscuelas.json();
+          console.log(jsonLE);
+          
+          //Muestra las escuelas en el html
+          const elementos = document.getElementById("integrantes");
+            fetch('/api/equipo')
+            .then(response => response.json())
+            .then(objetoDeArreglos => {
+                objetoDeArreglos.integrantes.forEach((integrante) => {
+                const escuelaDiv = document.createElement("div");
+                escuelaDiv.textContent = `${integrante.nombre}.  Cualidad: ${integrante.cualidad}`;
+                elementos.appendChild(escuelaDiv)
+                });
+            })
+            .catch(error => console.error('Error:', error));
+
+        }
+        obtenerEquipo();
+    </script>
+</body>
+</html>

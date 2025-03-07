@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Escuelas</title>
+    <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css">
+</head>
+<body>
+    <h1>Lista de escuelas</h1>
+   
+    <a href="/">Bienvenida</a>
+    <a href="/donantes">Donantes</a>
+
+    <br><br>
+
+    <div id="escuelas"></div>
+
+    <script>
+        async function obtenerEscuelas() {
+            //Agregar el url adecuado
+          const listaEscuelas= await fetch("/api/escuelas");
+          const jsonLE=await listaEscuelas.json();
+          console.log(jsonLE);
+
+
+            const divEscuelas = document.getElementById("escuelas");
+            fetch('/api/escuelas')
+            .then(response => response.json())
+            .then(objetoDeArreglos => {
+                objetoDeArreglos.escuelas.forEach((escuela) => {
+                const escuelaDiv = document.createElement("div");
+                escuelaDiv.textContent = `Nombre: ${escuela.nombre}.  Direccion: ${escuela.direccion}`;
+                divEscuelas.appendChild(escuelaDiv)
+                });
+            })
+            .catch(error => console.error('Error:', error));
+
+
+        }
+        obtenerEscuelas();
+    </script>
+</body>
+</html>
