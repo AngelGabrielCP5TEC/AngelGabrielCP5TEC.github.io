@@ -4,7 +4,7 @@ import fs from 'fs';
 const app = express();
 const puerto = 1984;
 
-app.use(express.static('public'));
+app.use(express.static('img'));
 
 app.get('/', (req, res) => {
     fs.readFile('bienvenida.html', 'utf8', (error, data) => {
