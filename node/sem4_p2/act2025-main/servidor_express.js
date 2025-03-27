@@ -16,7 +16,6 @@ app.get('/', (req, res) => {
     });
 });
 
-// Ruta para obtener datos de escuelas en formato JSON
 app.get('/api/escuelas', (req, res) => {
     const escuelas = {
         escuelas: [
@@ -27,7 +26,6 @@ app.get('/api/escuelas', (req, res) => {
     res.json(escuelas);
 });
 
-// Ruta para mostrar la página de escuelas
 app.get('/escuelas', (req, res) => {
     fs.readFile('escuelas.html', 'utf8', (error, data) => {
         if (error) {
@@ -38,7 +36,6 @@ app.get('/escuelas', (req, res) => {
     });
 });
 
-// Ruta para obtener datos de donantes en formato JSON
 app.get('/api/donantes', (req, res) => {
     const donantes = {
         donantes: [
@@ -49,7 +46,6 @@ app.get('/api/donantes', (req, res) => {
     res.json(donantes);
 });
 
-// Ruta para mostrar la página de donantes
 app.get('/donantes', (req, res) => {
     fs.readFile('donantes.html', 'utf8', (error, data) => {
         if (error) {
@@ -60,7 +56,6 @@ app.get('/donantes', (req, res) => {
     });
 });
 
-// Ruta para obtener datos del equipo en formato JSON
 app.get('/api/equipo', (req, res) => {
     const integrantesEquipo = {
         integrantes: [
@@ -75,7 +70,6 @@ app.get('/api/equipo', (req, res) => {
     res.json(integrantesEquipo);
 });
 
-// Ruta para mostrar la página del equipo
 app.get('/equipo', (req, res) => {
     fs.readFile('equipo.html', 'utf8', (error, data) => {
         if (error) {
@@ -86,7 +80,6 @@ app.get('/equipo', (req, res) => {
     });
 });
 
-// Ruta para mostrar la página de opinión
 app.get('/opinion', (req, res) => {
     fs.readFile('opinion.html', 'utf8', (error, data) => {
         if (error) {
@@ -97,12 +90,35 @@ app.get('/opinion', (req, res) => {
     });
 });
 
-// Manejo de rutas no encontradas
+
+//Ejercicio 12
+app.delete('/api/escuela/del/:nombre', (req, res) => {
+    const nombre= req.params.nombre;
+    console.log(`Escuela con el nombre ${nombre} borrada`)
+    res.send(`Escuela con el nombre ${nombre} borrada`);
+});
+
+app.delete('/api/escuelas/del', (req, res) => {
+    console.log(`Escuelas borradas`)
+    res.send(`Escuela borradas`);
+});
+
+
+
+
+
+
+
 app.use((req, res) => {
     res.status(404).send('A donde tan perdido? Aqui no hay pagina a donde llegar.');
 });
 
-// Iniciar servidor
+
+app.use((req, res) => {
+    res.status(404).send('A donde tan perdido? Aqui no hay pagina a donde llegar.');
+});
+
+//Iniciar servidor
 app.listen(puerto, () => {
     console.log(`Servidor escuchando en el puerto ${puerto}`);
 });
