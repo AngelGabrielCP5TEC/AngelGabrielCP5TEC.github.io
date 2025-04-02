@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagenes de la actividad de elemtos en JS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            width: 100%;
+            max-width: 800px;
+        }
+        .grid-item {
+            background-color: white;
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .grid-item img {
+            width: 100%;
+            height: auto;
+        }
+        h1 {
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="img/foto1.jpg" alt="Imagen 1">
+            <p>Crear elemento</p>
+        </div>
+        <div class="grid-item">
+            <img src="img/foto2.jpg" alt="Imagen 2">
+            <p>Contenido del elemento</p>
+        </div>
+        <div class="grid-item">
+            <img src="img/foto3.jpg" alt="Imagen 3">
+            <p>Elemento en azul</p>
+        </div>
+        <div class="grid-item">
+            <img src="img/foto4.jpg" alt="Imagen 4">
+            <p>Atributo pais del elemento</p>
+        </div>
+        <div class="grid-item">
+            <img src="img/foto5.jpg" alt="Imagen 4">
+            <p>Atributo del elemento reactivo</p>
+        </div>
+    </div>
+</body>
+</html>
